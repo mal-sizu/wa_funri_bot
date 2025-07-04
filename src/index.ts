@@ -1,55 +1,41 @@
-// src/server.ts
+import "dotenv/config";              // ← This will read .env into process.env
+import bodyParser from "body-parser";
+import webhookRoutes from "./routes/webhook.routes";
+import { connect } from "@ngrok/ngrok";
+import express from "express";
 
-import express from 'express';
-import bodyParser from 'body-parser';
-import { connect } from '@ngrok/ngrok';
-import dotenv from 'dotenv';
-import webhookRoutes from './routes/webhook.routes';
+// now your env‑vars will be available
+const { ACCESS_TOKEN, PHONE_NUMBER_ID, VERIFY_TOKEN, NGROK_AUTHTOKEN, NGROK_DOMAIN, SERVER_PORT } = process.env;
 
-// Load environment variables from .env file
-dotenv.config();
-
-// Validate critical environment variables on startup
-const {
-  SERVER_PORT,
-  VERIFY_TOKEN,
-  ACCESS_TOKEN,
-  PHONE_NUMBER_ID,
-  NGROK_AUTHTOKEN,
-  NGROK_DOMAIN
-} = process.env;
-
-if (!VERIFY_TOKEN || !ACCESS_TOKEN || !PHONE_NUMBER_ID) {
-  throw new Error("Missing required WhatsApp environment variables");
+if (!VERIFY_TOKEN || !ACCESS_TOKEN || !PHONE_NUMBER_ID || !NGROK_AUTHTOKEN) {
+  throw new Error('Missing required environment variables');
 }
 
+// Set up Express app
 const app = express();
-const PORT = SERVER_PORT || 3000;
+const PORT = Number(SERVER_PORT);
 
-// Middleware
+app.use(express.json());
 app.use(bodyParser.json());
-
-// API Routes
 app.use(webhookRoutes);
 
-// Start server and ngrok tunnel
 app.listen(PORT, async () => {
-  console.log(`🚀 Server running on port ${PORT}`);
+  console.log(`Server is running on port ${PORT}`);
 
-  if (NGROK_AUTHTOKEN && NGROK_DOMAIN) {
+  if ( NGROK_DOMAIN && NGROK_AUTHTOKEN ) {
     try {
       const listener = await connect({
         addr: Number(PORT),
         authtoken: NGROK_AUTHTOKEN,
         proto: 'http',
         domain: NGROK_DOMAIN,
-      });
-      console.log(`NGROK tunnel established at: ${listener.url()}`);
-      console.log(`Set WhatsApp webhook to: ${listener.url()}/webhook`);
+      }) 
+      console.log(`ngrok tunnel established at: ${listener.url()}`);
+      console.log(`Set this as your WhatsApp webhook URL: ${listener.url()}/webhook`);
     } catch (err) {
       console.error('Error starting ngrok:', err);
     }
   } else {
     console.warn('⚠️  NGROK_AUTHTOKEN missing - ngrok tunnel not started');
   }
-});
+})

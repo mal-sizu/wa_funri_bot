@@ -1,209 +1,429 @@
-const express = require('express');
-const bodyParser = require('body-parser');
-const dotenv = require('dotenv');
-const axios = require('axios'); 
-
-dotenv.config();
-
-const { ACCESS_TOKEN } = process.env;
-const RECIEVER = '94714619371'
-
-async function SendHelloTemplate() {
-    const response = await axios({
-        url: `https://graph.facebook.com/v22.0/626451293893325/messages`,
-        method: 'POST',
-        headers: {
-            'Authorization': `Bearer ${ACCESS_TOKEN}`,
-            'Content-Type': 'application/json'
-        },
-        data:JSON.stringify({
-            messaging_product: 'whatsapp',
-            to: RECIEVER,
-            type: 'template',
-            template: {
-                name: 'mark_01',
-                language: {
-                    code: 'en'
+const form = 
+{
+  "version": "7.1",
+  "screens": [
+    {
+      "id": "client_data",
+      "title": "Customer Details",
+      "data": {},
+      "layout": {
+        "type": "SingleColumnLayout",
+        "children": [
+          {
+            "type": "Form",
+            "name": "client_data_form",
+            "children": [
+              {
+                "type": "TextInput",
+                "label": "Full Name",
+                "name": "full_name",
+                "required": true,
+                "input_type": "text",
+                "helper_text": "Full Name | සම්පූර්ණ නම"
+              },
+              {
+                "type": "TextArea",
+                "label": "Address",
+                "name": "address",
+                "required": true,
+                "helper_text": "Address | ලිපිනය"
+              },
+              {
+                "type": "TextInput",
+                "label": "City",
+                "name": "city",
+                "required": true,
+                "input_type": "text",
+                "helper_text": "City | ආසන්නතම නගරය"
+              },
+              {
+                "type": "Dropdown",
+                "label": "District",
+                "name": "district",
+                "required": true,
+                "data_source": [
+                  { "id": "Colombo", "title": "Colombo - කොළඹ" },
+                  { "id": "Gampaha", "title": "Gampaha - ගම්පහ" },
+                  { "id": "Kalutara", "title": "Kalutara - කළුතර" },
+                  { "id": "Kandy", "title": "Kandy - මහනුවර" },
+                  { "id": "Matale", "title": "Matale - මාතලේ" },
+                  { "id": "Nuwara Eliya", "title": "Nuwara Eliya - නුවර එළිය" },
+                  { "id": "Galle", "title": "Galle - ගාල්ල" },
+                  { "id": "Matara", "title": "Matara - මාතර" },
+                  { "id": "Hambantota", "title": "Hambantota - හම්බන්තොට" },
+                  { "id": "Jaffna", "title": "Jaffna - යාපනය" },
+                  { "id": "Kilinochchi", "title": "Kilinochchi - කිලිනොච්චි" },
+                  { "id": "Mannar", "title": "Mannar - මන්නාරම" },
+                  { "id": "Vavuniya", "title": "Vavuniya - වවුනියාව" },
+                  { "id": "Mullaitivu", "title": "Mullaitivu - මුලතිව්" },
+                  { "id": "Batticaloa", "title": "Batticaloa - මඩකලපුව" },
+                  { "id": "Ampara", "title": "Ampara - අම්පාර" },
+                  { "id": "Trincomalee", "title": "Trincomalee - ත්‍රිකුණාමලය" },
+                  { "id": "Kurunegala", "title": "Kurunegala - කුරුණෑගල" },
+                  { "id": "Puttalam", "title": "Puttalam - පුත්තලම" },
+                  { "id": "Anuradhapura", "title": "Anuradhapura - අනුරාධපුරය" },
+                  { "id": "Polonnaruwa", "title": "Polonnaruwa - පොළොන්නරුව" },
+                  { "id": "Badulla", "title": "Badulla - බදුල්ල" },
+                  { "id": "Monaragala", "title": "Monaragala - මොනරාගල" },
+                  { "id": "Ratnapura", "title": "Ratnapura - රත්නපුර" },
+                  { "id": "Kegalle", "title": "Kegalle - කෑගල්ල" }
+                ]
+              },
+              {
+                "type": "TextCaption",
+                "text": "District | දිස්ත්‍රික්කය"
+              },
+              {
+                "type": "TextBody",
+                "text": "2 Available Mobiles | භාවිතයේ පවතින දුරකතන අංක 2ක්"
+              },
+              {
+                "type": "TextInput",
+                "label": "07X XXX XXXX",
+                "name": "mobile_phone",
+                "required": true,
+                "input_type": "number"
+              },
+              {
+                "type": "TextInput",
+                "label": "011X XXX XXX",
+                "name": "land_line",
+                "required": false,
+                "input_type": "number"
+              },
+              {
+                "type": "Footer",
+                "label": "Continue",
+                "on_click_action": {
+                  "name": "navigate",
+                  "next": "deliver_reqs",
+                  "payload": {
+                    "full_name": "${form.full_name}",
+                    "address": "${form.address}",
+                    "city": "${form.city}",
+                    "district": "${form.district}",
+                    "mobile_phone": "${form.mobile_phone}",
+                    "land_line": "${form.land_line}"
+                  }
                 }
-            }
-        })
-    })
-
-    console.log(response.data); 
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "deliver_reqs",
+      "title": "Delivery Details",
+      "terminal": true,
+      "data": {
+        "full_name": { "type": "string", "__example__": "John Doe" },
+        "address": { "type": "string", "__example__": "123 Main St" },
+        "city": { "type": "string", "__example__": "Colombo" },
+        "district": { "type": "string", "__example__": "Colombo" },
+        "mobile_phone": { "type": "string", "__example__": "0771234567" },
+        "land_line": { "type": "string", "__example__": "0112345678" }
+      },
+      "layout": {
+        "type": "SingleColumnLayout",
+        "children": [
+          {
+            "type": "Form",
+            "name": "delivery_reqs_form",
+            "children": [
+              {
+                "type": "TextBody",
+                "text": "ඔබගේ නිවස ආසන්නයට Dimo ලොරි එකක් පැමිණිය හැකිද?"
+              },
+              {
+                "type": "RadioButtonsGroup",
+                "label": "Can a lorry reach your home?",
+                "name": "can_lorry_reach_home",
+                "required": true,
+                "data_source": [
+                  { "id": "yes", "title": "Yes | ඔව්" },
+                  { "id": "no", "title": "No | නැත" }
+                ]
+              },
+              {
+                "type": "TextBody",
+                "text": "නැතිනම්, කොපමණ දුරක් ඔසවාගෙන යා යුතුද? (මීටර් වලින්)\nIf no, how far does it need to be carried? (in meters)"
+              },
+              {
+                "type": "TextInput",
+                "label": "00",
+                "name": "carry_distance",
+                "required": false,
+                "input_type": "number"
+              },
+              {
+                "type": "TextBody",
+                "text": "බෙදාහැරීම සඳහා පඩිපෙල් හෝ උඩුමහල් තිබේද?"
+              },
+              {
+                "type": "RadioButtonsGroup",
+                "label": "Are there any stairs?",
+                "name": "are_there_any_stairs",
+                "required": true,
+                "data_source": [
+                  { "id": "yes", "title": "Yes | ඔව්" },
+                  { "id": "no", "title": "No | නැත" }
+                ]
+              },
+              {
+                "type": "TextBody",
+                "text": "ඔව් නම්, කරුණාකර විස්තර සපයන්න (උදා: තට්ටු ගණන, පඩිපෙළේ පළල).\nIf yes, please provide details (e.g., number of floors, staircase width)."
+              },
+              {
+                "type": "TextArea",
+                "label": "Stair Details",
+                "name": "stair_details",
+                "required": false
+              },
+              {
+                "type": "Footer",
+                "label": "Done",
+                "on_click_action": {
+                  "name": "complete",
+                  "payload": {
+                    "can_lorry_reach_home": "${form.can_lorry_reach_home}",
+                    "carry_distance": "${form.carry_distance}",
+                    "are_there_any_stairs": "${form.are_there_any_stairs}",
+                    "stair_details": "${form.stair_details}",
+                    "full_name": "${data.full_name}",
+                    "address": "${data.address}",
+                    "city": "${data.city}",
+                    "district": "${data.district}",
+                    "mobile_phone": "${data.mobile_phone}",
+                    "land_line": "${data.land_line}"
+                  }
+                }
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
 }
-    
 
-async function sendTextMessage() {
-    const response = await axios({
-        url: `https://graph.facebook.com/v22.0/626451293893325/messages`,
-        method: 'POST',
-        headers: {
-            'Authorization': `Bearer ${ACCESS_TOKEN}`,
-            'Content-Type': 'application/json'
-        },
-        data:JSON.stringify({
-            messaging_product: 'whatsapp',
-            to: RECIEVER,
-            type: 'text',
-            text: {
-                body: 'Hello, how are you?'
-            }
-        })
-    })
-}
-
-async function sendImageMessage() {
-
-    const cap = `
-    Melamine 2 Door Wardrobes
-
-    Measurements :
-    - Heigth | උස : 72"
-    - Width | පළල : 32"
-    - Depth | ගැඹුර : 16"
-    - Thickness | ඝනකම : 12mm
-
-    Available Colors | වර්ණ ප්‍රභේද :
-    - Teak Brown
-    - American Ash
-    - White
-    - Black
-
-    ----------------------------------------------------------------------------
-
-    ▫දොර 2 මෙලමයින් අල්මාරිය | 2 door melamine wardrobe
-        Item code : #w2hc
-        23,500/=
-
-    ▫දොර 2 මෙලමයින් කණ්ණාඩි අල්මාරිය | 2 door melamine wardrobe with mirror
-        Item code : #w2hcm
-        24,500/=
-
-    ▫දොර 2 මෙලමයින් ලාච්චු අල්මාරිය | 2 door melamine wardrobe with drawers
-        Item code : #w2d
-        24,500/=
-
-    ▫දොර 2 මෙලමයින් ලාච්චු කණ්ණාඩි අල්මාරිය | 2 door melamine wardrobe with drawers & mirror
-        Item code : #w2dm
-        25,500/=`
-
-    const response = await axios ({
-        url: `https://graph.facebook.com/v22.0/626451293893325/messages`,
-        method: 'POST',
-        headers: {
-            'Authorization': `Bearer ${ACCESS_TOKEN}`,
-            'Content-Type': 'application/json'
-        },
-        data: JSON.stringify({
-            messaging_product: 'whatsapp',
-            to: RECIEVER,
-            type: 'image',
-            image:{
-                link: 'https://github.com/mal-sizu/wa_funri_bot/blob/master/assets/w2/w2d/WhatsApp%20Image%202025-07-02%20at%2020.09.06_73e1d7b3.jpg?raw=true',
-                caption: cap
-            }
-        })
-    })
-}
-
-async function sendInteractiveMessage() {
-    const response = await axios({
-        url: `https://graph.facebook.com/v22.0/626451293893325/messages`,
-        method: 'POST',
-        headers: {
-            'Authorization': `Bearer ${ACCESS_TOKEN}`,
-            'Content-Type': 'application/json'
-        },
-        data: JSON.stringify({
-            messaging_product: 'whatsapp',
-            recipient_type: "individual",
-            to: RECIEVER,
-            type: 'interactive',
-            interactive: {
-                type: 'list',
-                header: {
-                  type: 'text',
-                  text: '🛋️ Welcome to Your Furniture Shop! 🛋️',
-                },
-                body: {
-                  text: "Hello! We're delighted to help you find the perfect furniture for your space. Please select a category below to start Browse.",
-                },
-                footer: {
-                  text: 'Your Home, Your Style',
-                },
-                action: {
-                  button: 'Browse Categories',
-                  sections: [
-                    {
-                      title: 'SHOP BY ROOM',
-                      rows: [
-                        {
-                          id: 'shop_living_room',
-                          title: 'Living Room',
-                          description: 'Sofas, coffee tables, TV units, and more',
-                        },
-                        {
-                          id: 'shop_bedroom',
-                          title: 'Bedroom',
-                          description: 'Beds, wardrobes, dressers, and nightstands',
-                        },
-                        {
-                          id: 'shop_dining_room',
-                          title: 'Dining Room',
-                          description: 'Dining tables, chairs, and sideboards',
-                        },
-                        {
-                          id: 'shop_office',
-                          title: 'Office',
-                          description: 'Desks, office chairs, and storage solutions',
-                        },
-                      ],
+const enhanced_form = 
+{
+  "version": "7.1",
+  "screens": [
+    {
+      "id": "client_data",
+      "title": "Customer Details",
+      "data": {},
+      "layout": {
+        "type": "SingleColumnLayout",
+        "children": [
+          {
+            "type": "Form",
+            "name": "client_data_form",
+            "children": [
+              {
+                "type": "TextInput",
+                "label": "Full Name",
+                "name": "full_name",
+                "required": true,
+                "input_type": "text",
+                "helper_text": "Full Name | සම්පූර්ණ නම"
+              },
+              {
+                "type": "TextArea",
+                "label": "Address",
+                "name": "address",
+                "required": true,
+                "helper_text": "Address | ලිපිනය"
+              },
+              {
+                "type": "TextInput",
+                "label": "City",
+                "name": "city",
+                "required": true,
+                "input_type": "text",
+                "helper_text": "City | ආසන්නතම නගරය"
+              },
+              {
+                "type": "Dropdown",
+                "label": "District",
+                "name": "district",
+                "required": true,
+                "data_source": [
+                  { "id": "Colombo", "title": "Colombo - කොළඹ" },
+                  { "id": "Gampaha", "title": "Gampaha - ගම්පහ" },
+                  { "id": "Kalutara", "title": "Kalutara - කළුතර" },
+                  { "id": "Kandy", "title": "Kandy - මහනුවර" },
+                  { "id": "Matale", "title": "Matale - මාතලේ" },
+                  { "id": "Nuwara Eliya", "title": "Nuwara Eliya - නුවර එළිය" },
+                  { "id": "Galle", "title": "Galle - ගාල්ල" },
+                  { "id": "Matara", "title": "Matara - මාතර" },
+                  { "id": "Hambantota", "title": "Hambantota - හම්බන්තොට" },
+                  { "id": "Jaffna", "title": "Jaffna - යාපනය" },
+                  { "id": "Kilinochchi", "title": "Kilinochchi - කිලිනොච්චි" },
+                  { "id": "Mannar", "title": "Mannar - මන්නාරම" },
+                  { "id": "Vavuniya", "title": "Vavuniya - වවුනියාව" },
+                  { "id": "Mullaitivu", "title": "Mullaitivu - මුලතිව්" },
+                  { "id": "Batticaloa", "title": "Batticaloa - මඩකලපුව" },
+                  { "id": "Ampara", "title": "Ampara - අම්පාර" },
+                  { "id": "Trincomalee", "title": "Trincomalee - ත්‍රිකුණාමලය" },
+                  { "id": "Kurunegala", "title": "Kurunegala - කුරුණෑගල" },
+                  { "id": "Puttalam", "title": "Puttalam - පුත්තලම" },
+                  { "id": "Anuradhapura", "title": "Anuradhapura - අනුරාධපුරය" },
+                  { "id": "Polonnaruwa", "title": "Polonnaruwa - පොළොන්නරුව" },
+                  { "id": "Badulla", "title": "Badulla - බදුල්ල" },
+                  { "id": "Monaragala", "title": "Monaragala - මොනරාගල" },
+                  { "id": "Ratnapura", "title": "Ratnapura - රත්නපුර" },
+                  { "id": "Kegalle", "title": "Kegalle - කෑගල්ල" }
+                ]
+              },
+              {
+                "type": "TextCaption",
+                "text": "District | දිස්ත්‍රික්කය"
+              },
+              {
+                "type": "TextBody",
+                "text": "2 Available Mobiles | භාවිතයේ පවතින දුරකතන අංක 2ක්"
+              },
+              {
+                "type": "TextInput",
+                "label": "07X XXX XXXX",
+                "name": "mobile_phone",
+                "required": true,
+                "input_type": "number",
+                "helper_text": "Enter a 10-digit mobile number (e.g., 0771234567)",
+                "validation_regex": "^07[0-9]{8}$"
+              },
+              {
+                "type": "TextInput",
+                "label": "011X XXX XXX",
+                "name": "land_line",
+                "required": false,
+                "input_type": "number",
+                "helper_text": "Enter a 10-digit landline number (e.g., 0112345678)",
+                "validation_regex": "^01[0-9]{8}$"
+              },
+              {
+                "type": "Footer",
+                "label": "Continue",
+                "on_click_action": {
+                  "name": "navigate",
+                  "next": "deliver_reqs",
+                  "payload": {
+                    "full_name": "${form.full_name}",
+                    "address": "${form.address}",
+                    "city": "${form.city}",
+                    "district": "${form.district}",
+                    "mobile_phone": "${form.mobile_phone}",
+                    "land_line": "${form.land_line}"
+                  }
+                }
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "deliver_reqs",
+      "title": "Delivery Details",
+      "terminal": true,
+      "data": {
+        "full_name": { "type": "string", "__example__": "John Doe" },
+        "address": { "type": "string", "__example__": "123 Main St" },
+        "city": { "type": "string", "__example__": "Colombo" },
+        "district": { "type": "string", "__example__": "Colombo" },
+        "mobile_phone": { "type": "string", "__example__": "0771234567" },
+        "land_line": { "type": "string", "__example__": "0112345678" }
+      },
+      "layout": {
+        "type": "SingleColumnLayout",
+        "children": [
+          {
+            "type": "Form",
+            "name": "delivery_reqs_form",
+            "children": [
+              {
+                "type": "TextBody",
+                "text": "ඔබගේ නිවස ආසන්නයට Dimo ලොරි එකක් පැමිණිය හැකිද?"
+              },
+              {
+                "type": "RadioButtonsGroup",
+                "label": "Can a lorry reach your home?",
+                "name": "can_lorry_reach_home",
+                "required": true,
+                "data_source": [
+                  { "id": "yes", "title": "Yes | ඔව්" },
+                  { "id": "no", "title": "No | නැත" }
+                ]
+              },
+              {
+                "type": "TextBody",
+                "text": "නැතිනම්, කොපමණ දුරක් ඔසවාගෙන යා යුතුද? (මීටර් වලින්)\nIf no, how far does it need to be carried? (in meters)",
+                "visible": "${form.can_lorry_reach_home == 'no'}"
+              },
+              {
+                "type": "TextInput",
+                "label": "00",
+                "name": "carry_distance",
+                "required": false,
+                "input_type": "number",
+                "visible": "${form.can_lorry_reach_home == 'no'}"
+              },
+              {
+                "type": "TextBody",
+                "text": "බෙදාහැරීම සඳහා පඩිපෙල් හෝ උඩුමහල් තිබේද?"
+              },
+              {
+                "type": "RadioButtonsGroup",
+                "label": "Are there any stairs?",
+                "name": "are_there_any_stairs",
+                "required": true,
+                "data_source": [
+                  { "id": "yes", "title": "Yes | ඔව්" },
+                  { "id": "no", "title": "No | නැත" }
+                ]
+              },
+              {
+                "type": "TextBody",
+                "text": "ඔව් නම්, කරුණාකර විස්තර සපයන්න (උදා: තට්ටු ගණන, පඩිපෙළේ පළල).\nIf yes, please provide details (e.g., number of floors, staircase width).",
+                "visible": "${form.are_there_any_stairs == 'yes'}"
+              },
+              {
+                "type": "TextArea",
+                "label": "Stair Details",
+                "name": "stair_details",
+                "required": false,
+                "visible": "${form.are_there_any_stairs == 'yes'}"
+              },
+              {
+                "type": "Footer",
+                "label": "Done",
+                "on_click_action": {
+                  "name": "complete",
+                  "payload": {
+                    "customer": {
+                      "full_name": "${data.full_name}",
+                      "address": "${data.address}",
+                      "city": "${data.city}",
+                      "district": "${data.district}",
+                      "mobile_phone": "${data.mobile_phone}",
+                      "land_line": "${data.land_line}"
                     },
-                    {
-                      title: 'SHOP BY FURNITURE TYPE',
-                      rows: [
-                        {
-                          id: 'type_seating',
-                          title: 'Seating',
-                          description: 'Explore our collection of sofas, armchairs, and recliners',
-                        },
-                        {
-                          id: 'type_tables',
-                          title: 'Tables',
-                          description: 'Find the perfect dining, coffee, or side table',
-                        },
-                        {
-                          id: 'type_storage',
-                          title: 'Storage',
-                          description: 'Shelves, cabinets, and wardrobes for every need',
-                        },
-                      ],
-                    },
-                    {
-                      title: 'MORE OPTIONS',
-                      rows: [
-                        {
-                          id: 'view_offers',
-                          title: 'Special Offers',
-                          description: 'View our latest deals and discounts',
-                        },
-                        {
-                          id: 'contact_expert',
-                          title: 'Talk to an Expert',
-                          description: 'Get personalized advice from our design team',
-                        },
-                      ],
-                    },
-                  ],
-                },
-            },
-        })
-    })
-    console.log(response.data);
+                    "delivery": {
+                      "lorry_access": "${form.can_lorry_reach_home}",
+                      "carry_distance_meters": "${form.carry_distance}",
+                      "stairs_present": "${form.are_there_any_stairs}",
+                      "stair_details": "${form.stair_details}"
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
 }
-
-SendHelloTemplate();
-sendTextMessage();
-sendImageMessage();
-sendInteractiveMessage();
-

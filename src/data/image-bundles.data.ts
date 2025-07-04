@@ -19,11 +19,11 @@ interface Image {
     ],
     clothing: [
       {
-        url: 'https://images.pexels.com/photos/1598505/pexels-photo-1598505.jpeg',
+        url: 'https://photos.fife.usercontent.google.com/pw/AP1GczNYoNCa1kAunzG3wpRYH7qE9AaNRC7r3WtLoponrK23cRtMZBGvtN0=w488-h651-s-no-gm?authuser=0',
         caption: 'Stylish and comfortable footwear.'
       },
       {
-        url: 'https://images.pexels.com/photos/298863/pexels-photo-298863.jpeg',
+        url: 'https://drive.google.com/file/d/11A-C94f9GKp6YgG8AdW_7jL4nn1Oxoua/view?usp=sharing',
         caption: 'Classic formal wear for any occasion.'
       },
       {
@@ -31,6 +31,142 @@ interface Image {
         caption: 'Casual jackets for a modern look.'
       }
     ],
+    wardrobes: [
+      {
+        url: '',
+        caption: `
+          CATALOGUE
+
+          Hi! Welcome to Furnistore!
+
+          අඩුවට තියෙන බාල මෙලමයින් අල්මාරි වලින් එහා යමක් සාදාරණ ගානට ඔයත් හොයනවද? ඔයාගෙ අල්මාරියත් මෙතන ඇති👇
+
+          Our Wardrobe collection: 
+
+          👑   5 YEARS WARRANTY 
+          🛠   Made with high grade melamine. 
+          🟡   12 mm Thickness
+
+          💸 CASH ON DELIVERY 
+          🚛 Island wide delivery 
+
+          🟡 different designs 
+
+          2 Door | 3 Door | 4 Door
+          - With drawers
+          - Without drawres 
+          - 2 drawer types 
+          - With mirror 
+          - Without mirrors 
+
+          🟡 different colors of your choice
+          - Teak Brown 
+          - White 
+          - American Ash
+          - Black
+        `,
+      },
+      {
+        url: '',
+        caption: ``,
+      },
+      {
+        url: '',
+        caption: ``,
+      },
+      {
+        url: '',
+        caption: ``,
+      },
+      {
+        url: '',
+        caption: ``,
+      },
+      {
+        url: '',
+        caption: ``,
+      },
+      {
+        url: '',
+        caption: ``,
+      },
+      {
+        url: '',
+        caption: ``,
+      },
+      {
+        url: '',
+        caption: ``,
+      },
+      {
+        url: '',
+        caption: ``,
+      },
+      {
+        url: '',
+        caption: ``,
+      },
+      {
+        url: '',
+        caption: ``,
+      },
+      {
+        url: '',
+        caption: ``,
+      },
+      {
+        url: '',
+        caption: ``,
+      },
+      {
+        url: '',
+        caption: ``,
+      },
+      {
+        url: '',
+        caption: ``,
+      },
+      {
+        url: '',
+        caption: ``,
+      },
+      {
+        url: '',
+        caption: ``,
+      },
+      {
+        url: '',
+        caption: ``,
+      },
+      {
+        url: '',
+        caption: ``,
+      },
+      {
+        url: '',
+        caption: ``,
+      },
+      {
+        url: '',
+        caption: ``,
+      },
+      {
+        url: '',
+        caption: ``,
+      },
+      {
+        url: '',
+        caption: ``,
+      },
+      {
+        url: '',
+        caption: ``,
+      },
+      {
+        url: '',
+        caption: ``,
+      },
+    ]
     // Add more bundles as needed
   };
   
