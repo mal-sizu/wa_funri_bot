@@ -105,9 +105,10 @@ export async function handleWebhook(req: Request, res: Response) {
         console.log(`Received text from ${customerPhoneNumber}. Triggering welcome flow.`);
         
         await sendTemplateMessage(customerPhoneNumber, 'mark_01');
-        await sendImageBundle(customerPhoneNumber, 'catalogue');
-        await sendImageBundle(customerPhoneNumber, 'cupboards');
-        await sendInteractiveList(customerPhoneNumber, 'mainMenu')
+        // await sendImageBundle(customerPhoneNumber, 'catalogue');
+        // await sendImageBundle(customerPhoneNumber, 'cupboards');
+        // await sendInteractiveList(customerPhoneNumber, 'mainMenu')
+        await sendImageBundle(customerPhoneNumber, 'tables');
       } else {
         console.log(`Ignoring unhandled message type '${message.type}'`);
       }

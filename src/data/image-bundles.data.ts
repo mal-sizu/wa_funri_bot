@@ -204,148 +204,185 @@ interface Image {
         "url": "https://github.com/mal-sizu/wa_funri_bot/blob/master/assets/catalogue/49.png?raw=true",
         "caption": ""
       },
-      {
-        "url": "https://github.com/mal-sizu/wa_funri_bot/blob/master/assets/catalogue/50.png?raw=true",
-        "caption": ""
-      },
+      // {
+      //   "url": "https://github.com/mal-sizu/wa_funri_bot/blob/master/assets/catalogue/50.png?raw=true",
+      //   "caption": ""
+      // },
       {
         "url": "https://github.com/mal-sizu/wa_funri_bot/blob/master/assets/catalogue/51.png?raw=true",
         "caption": ""
       },
-      {
-        "url": "https://github.com/mal-sizu/wa_funri_bot/blob/master/assets/catalogue/52.png?raw=true",
-        "caption": ""
-      },
+      // {
+      //   "url": "https://github.com/mal-sizu/wa_funri_bot/blob/master/assets/catalogue/52.png?raw=true",
+      //   "caption": ""
+      // },
       {
         "url": "https://github.com/mal-sizu/wa_funri_bot/blob/master/assets/catalogue/53.png?raw=true",
         "caption": ""
       },
       {
-        "url": "https://github.com/mal-sizu/wa_funri_bot/blob/master/assets/tables%2FdressingTables/WhatsApp%20Image%202025-07-05%20at%2002.57.28_806dbe90.jpg?raw=true",
-        "caption": "Samples"
-      },
-      {
-        "url": "https://github.com/mal-sizu/wa_funri_bot/blob/master/assets/tables%2FdressingTables/WhatsApp%20Image%202025-07-05%20at%2002.57.29_3643f781.jpg?raw=true",
-        "caption": ""
-      },
-      {
-        "url": "https://github.com/mal-sizu/wa_funri_bot/blob/master/assets/tables%2FdressingTables/WhatsApp%20Image%202025-07-05%20at%2002.57.29_4c5c2f45.jpg?raw=true",
-        "caption": ""
-      },
-      {
-        "url": "https://github.com/mal-sizu/wa_funri_bot/blob/master/assets/tables%2FdressingTables/WhatsApp%20Image%202025-07-05%20at%2002.57.29_efdb2dde.jpg?raw=true",
-        "caption": ""
-      },
-      {
-        "url": "https://github.com/mal-sizu/wa_funri_bot/blob/master/assets/tables%2FdressingTables/WhatsApp%20Image%202025-07-05%20at%2002.57.30_0f1369d9.jpg?raw=true",
-        "caption": ""
-      },
-      {
-        "url": "https://github.com/mal-sizu/wa_funri_bot/blob/master/assets/tables%2FdressingTables/WhatsApp%20Image%202025-07-05%20at%2002.57.30_69dbadfa.jpg?raw=true",
-        "caption": ""
-      },
-      {
-        "url": "https://github.com/mal-sizu/wa_funri_bot/blob/master/assets/tables%2FdressingTables/WhatsApp%20Image%202025-07-05%20at%2002.57.30_a23dce4b.jpg?raw=true",
-        "caption": ""
-      },
-      {
         "url": "https://github.com/mal-sizu/wa_funri_bot/blob/master/assets/tables%2FdressingTables/WhatsApp%20Image%202025-07-05%20at%2002.57.30_b91cc33e.jpg?raw=true",
-        "caption": ""
-      },
-      {
-        "url": "https://github.com/mal-sizu/wa_funri_bot/blob/master/assets/tables%2FdressingTables/WhatsApp%20Image%202025-07-05%20at%2002.57.31_8021fd6d.jpg?raw=true",
-        "caption": ""
-      },
-      {
-        "url": "https://github.com/mal-sizu/wa_funri_bot/blob/master/assets/tables%2FdressingTables/WhatsApp%20Image%202025-07-05%20at%2002.57.31_c6602ecc.jpg?raw=true",
-        "caption": ""
-      },
-      {
-        "url": "https://github.com/mal-sizu/wa_funri_bot/blob/master/assets/tables%2FdressingTables/WhatsApp%20Image%202025-07-05%20at%2002.57.33_357707c9.jpg?raw=true",
-        "caption": ""
-      },
-      {
-        "url": "https://github.com/mal-sizu/wa_funri_bot/blob/master/assets/tables%2FdressingTables/WhatsApp%20Image%202025-07-05%20at%2002.57.33_47a5ed6a.jpg?raw=true",
-        "caption": ""
-      },
-      {
-        "url": "https://github.com/mal-sizu/wa_funri_bot/blob/master/assets/tables%2FdressingTables/WhatsApp%20Image%202025-07-05%20at%2002.57.36_bc5a2291.jpg?raw=true",
-        "caption": ""
-      },
-      {
-        "url": "https://github.com/mal-sizu/wa_funri_bot/blob/master/assets/tables%2FdressingTables/WhatsApp%20Image%202025-07-05%20at%2002.57.36_e7dce4b7.jpg?raw=true",
-        "caption": ""
-      },
-      {
-        "url": "https://github.com/mal-sizu/wa_funri_bot/blob/master/assets/tables%2FdressingTables/WhatsApp%20Image%202025-07-05%20at%2002.57.36_f746c8a4.jpg?raw=true",
-        "caption": ""
-      },
-      {
-        "url": "https://github.com/mal-sizu/wa_funri_bot/blob/master/assets/tables%2FdressingTables/WhatsApp%20Image%202025-07-05%20at%2002.57.37_1763e534.jpg?raw=true",
-        "caption": ""
-      },
-      {
-        "url": "https://github.com/mal-sizu/wa_funri_bot/blob/master/assets/tables%2FdressingTables/WhatsApp%20Image%202025-07-05%20at%2002.57.37_39fe269c.jpg?raw=true",
-        "caption": ""
-      },
-      {
-        "url": "https://github.com/mal-sizu/wa_funri_bot/blob/master/assets/tables%2FdressingTables/WhatsApp%20Image%202025-07-05%20at%2002.57.38_2b8f74d3.jpg?raw=true",
-        "caption": ""
-      },
-      {
-        "url": "https://github.com/mal-sizu/wa_funri_bot/blob/master/assets/tables%2FdressingTables/WhatsApp%20Image%202025-07-05%20at%2002.57.38_6ba91597.jpg?raw=true",
-        "caption": ""
+        "caption":`
+        Melamine Saree Dressing Table 
+        26,500/=`
       },
       {
         "url": "https://github.com/mal-sizu/wa_funri_bot/blob/master/assets/tables%2FdressingTables/WhatsApp%20Image%202025-07-05%20at%2002.57.38_fe6ec23b.jpg?raw=true",
-        "caption": ""
+        "caption": `
+        Melamine Saree Dressing Table 
+        26,500/=`
       },
       {
-        "url": "https://github.com/mal-sizu/wa_funri_bot/blob/master/assets/tables%2FdressingTables/WhatsApp%20Image%202025-07-05%20at%2002.57.43_d6cbb10c.jpg?raw=true",
-        "caption": ""
-      },
-      {
-        "url": "https://github.com/mal-sizu/wa_funri_bot/blob/master/assets/tables%2FdressingTables/WhatsApp%20Image%202025-07-05%20at%2002.57.43_f5a7dab7.jpg?raw=true",
-        "caption": ""
-      },
-      {
-        "url": "https://github.com/mal-sizu/wa_funri_bot/blob/master/assets/tables%2FdressingTables/WhatsApp%20Image%202025-07-05%20at%2002.57.44_1a401090.jpg?raw=true",
-        "caption": ""
-      },
-      {
-        "url": "https://github.com/mal-sizu/wa_funri_bot/blob/master/assets/tables%2FdressingTables/WhatsApp%20Image%202025-07-05%20at%2002.57.44_2037f367.jpg?raw=true",
-        "caption": ""
-      },
-      {
-        "url": "https://github.com/mal-sizu/wa_funri_bot/blob/master/assets/tables%2FdressingTables/WhatsApp%20Image%202025-07-05%20at%2002.57.44_5b8e2b85.jpg?raw=true",
-        "caption": ""
-      },
-      {
-        "url": "https://github.com/mal-sizu/wa_funri_bot/blob/master/assets/tables%2FdressingTables/WhatsApp%20Image%202025-07-05%20at%2002.57.45_8c66b16d.jpg?raw=true",
-        "caption": ""
-      },
-      {
-        "url": "https://github.com/mal-sizu/wa_funri_bot/blob/master/assets/tables%2FdressingTables/WhatsApp%20Image%202025-07-05%20at%2002.57.45_c6fff9a2.jpg?raw=true",
-        "caption": ""
-      },
-      {
-        "url": "https://github.com/mal-sizu/wa_funri_bot/blob/master/assets/tables%2FdressingTables/WhatsApp%20Image%202025-07-05%20at%2002.57.45_ddcc5e58.jpg?raw=true",
-        "caption": ""
+        "url": "https://github.com/mal-sizu/wa_funri_bot/blob/master/assets/tables%2FdressingTables/WhatsApp%20Image%202025-07-05%20at%2002.57.30_0f1369d9.jpg?raw=true",
+        "caption":`
+        Melamine Saree Dressing Table 
+        26,500/=`
       },
       {
         "url": "https://github.com/mal-sizu/wa_funri_bot/blob/master/assets/tables%2FdressingTables/WhatsApp%20Image%202025-07-05%20at%2002.57.46_0b21d8f3.jpg?raw=true",
-        "caption": ""
+        "caption": `
+        Melamine Saree Dressing Table 
+        26,500/=`
+      },
+      {
+        "url": "https://github.com/mal-sizu/wa_funri_bot/blob/master/assets/tables%2FdressingTables/WhatsApp%20Image%202025-07-05%20at%2002.57.36_bc5a2291.jpg?raw=true",
+        "caption": `
+        Vanity Mirror
+        31,500/=
+        `
+      },
+      {
+        "url": "https://github.com/mal-sizu/wa_funri_bot/blob/master/assets/tables%2FdressingTables/WhatsApp%20Image%202025-07-05%20at%2002.57.37_39fe269c.jpg?raw=true",
+        "caption": `
+        Vanity Mirror
+        31,500/=
+        `
+      },
+      {
+        "url": "https://github.com/mal-sizu/wa_funri_bot/blob/master/assets/tables%2FdressingTables/WhatsApp%20Image%202025-07-05%20at%2002.57.38_2b8f74d3.jpg?raw=true",
+        "caption": `
+        Vanity Mirror
+        31,500/=`
+      },
+      {
+        "url": "https://github.com/mal-sizu/wa_funri_bot/blob/master/assets/tables%2FdressingTables/WhatsApp%20Image%202025-07-05%20at%2002.57.38_6ba91597.jpg?raw=true",
+        "caption": `
+        Vanity Mirror witth lockers
+        37,500/=`
+      },
+      {
+        "url": "https://github.com/mal-sizu/wa_funri_bot/blob/master/assets/tables%2FdressingTables/WhatsApp%20Image%202025-07-05%20at%2002.57.37_1763e534.jpg?raw=true",
+        "caption": `
+        Vanity Mirror witth lockers
+        37,500/=`
+      },
+      {
+        "url": "https://github.com/mal-sizu/wa_funri_bot/blob/master/assets/tables%2FdressingTables/WhatsApp%20Image%202025-07-05%20at%2002.57.44_2037f367.jpg?raw=true",
+        "caption": "15,500/="
+      },
+      {
+        "url": "https://github.com/mal-sizu/wa_funri_bot/blob/master/assets/tables%2FdressingTables/WhatsApp%20Image%202025-07-05%20at%2002.57.43_f5a7dab7.jpg?raw=true",
+        "caption": "17,000/="
+      },
+      {
+        "url": "https://github.com/mal-sizu/wa_funri_bot/blob/master/assets/tables%2FdressingTables/WhatsApp%20Image%202025-07-05%20at%2002.57.45_c6fff9a2.jpg?raw=true",
+        "caption": "22,500/="
+      },
+      {
+        "url": "https://github.com/mal-sizu/wa_funri_bot/blob/master/assets/tables%2FdressingTables/WhatsApp%20Image%202025-07-05%20at%2002.57.31_8021fd6d.jpg?raw=true",
+        "caption": "22,900/="
       },
       {
         "url": "https://github.com/mal-sizu/wa_funri_bot/blob/master/assets/tables%2FdressingTables/WhatsApp%20Image%202025-07-05%20at%2002.57.46_93a99b04.jpg?raw=true",
-        "caption": ""
+        "caption": "22,900/="
       },
       {
         "url": "https://github.com/mal-sizu/wa_funri_bot/blob/master/assets/tables%2FdressingTables/WhatsApp%20Image%202025-07-05%20at%2002.57.46_992f3c77.jpg?raw=true",
-        "caption": ""
+        "caption": "22,900/="
       },
       {
         "url": "https://github.com/mal-sizu/wa_funri_bot/blob/master/assets/tables%2FdressingTables/WhatsApp%20Image%202025-07-05%20at%2002.57.47_654f70d9.jpg?raw=true",
+        "caption": `
+        Melamine Dressing Table 
+        23,900/=`
+      },
+      {
+        "url": "https://github.com/mal-sizu/wa_funri_bot/blob/master/assets/tables%2FdressingTables/WhatsApp%20Image%202025-07-05%20at%2002.57.43_d6cbb10c.jpg?raw=true",
+        "caption": `
+        Melamine Dressing Table 
+        23,900/=(Any Color)`
+      },
+      {
+        "url": "https://github.com/mal-sizu/wa_funri_bot/blob/master/assets/tables%2FdressingTables/WhatsApp%20Image%202025-07-05%20at%2002.57.44_5b8e2b85.jpg?raw=true",
+        "caption": `
+        Melamine Sliding Dressing Table 
+        23,900/=(Any Color)`
+      },
+      {
+        "url": "https://github.com/mal-sizu/wa_funri_bot/blob/master/assets/tables%2FdressingTables/WhatsApp%20Image%202025-07-05%20at%2002.57.45_8c66b16d.jpg?raw=true",
+        "caption": "26,900/="
+      },
+      {
+        "url": "https://github.com/mal-sizu/wa_funri_bot/blob/master/assets/tables%2FdressingTables/WhatsApp%20Image%202025-07-05%20at%2002.57.29_3643f781.jpg?raw=true",
+        "caption": "27,900/="
+      },
+      {
+        "url": "https://github.com/mal-sizu/wa_funri_bot/blob/master/assets/tables%2FdressingTables/WhatsApp%20Image%202025-07-05%20at%2002.57.30_a23dce4b.jpg?raw=true",
+        "caption": "27,500/="
+      },
+      {
+        "url": "https://github.com/mal-sizu/wa_funri_bot/blob/master/assets/tables%2FdressingTables/WhatsApp%20Image%202025-07-05%20at%2002.57.31_c6602ecc.jpg?raw=true",
+        "caption": "31,000/="
+      },
+      {
+        "url": "https://github.com/mal-sizu/wa_funri_bot/blob/master/assets/tables%2FdressingTables/WhatsApp%20Image%202025-07-05%20at%2002.57.33_357707c9.jpg?raw=true",
+        "caption": "31,000/="
+      },
+      {
+        "url": "https://github.com/mal-sizu/wa_funri_bot/blob/master/assets/tables%2FdressingTables/WhatsApp%20Image%202025-07-05%20at%2002.57.28_806dbe90.jpg?raw=true",
+        "caption": `
+          Hollywood Mirror Small
+          39,990/=
+        `
+      },
+      {
+        "url": "https://github.com/mal-sizu/wa_funri_bot/blob/master/assets/tables%2FdressingTables/WhatsApp%20Image%202025-07-05%20at%2002.57.29_4c5c2f45.jpg?raw=true",
+        "caption": "39,990/="
+      },
+      {
+        "url": "https://github.com/mal-sizu/wa_funri_bot/blob/master/assets/tables%2FdressingTables/WhatsApp%20Image%202025-07-05%20at%2002.57.36_e7dce4b7.jpg?raw=true",
+        "caption": "39,990/="
+      },
+      {
+        "url": "https://github.com/mal-sizu/wa_funri_bot/blob/master/assets/tables%2FdressingTables/WhatsApp%20Image%202025-07-05%20at%2002.57.29_efdb2dde.jpg?raw=true",
+        "caption": `
+          Hollywood Mirror Large
+          46,900/=`
+      },
+      {
+        "url": "https://github.com/mal-sizu/wa_funri_bot/blob/master/assets/tables%2FdressingTables/WhatsApp%20Image%202025-07-05%20at%2002.57.44_1a401090.jpg?raw=true",
+        "caption":  `
+        Hollywood Mirror Large
+        46,900/=`
+      },
+      {
+        "url": "https://github.com/mal-sizu/wa_funri_bot/blob/master/assets/tables%2FdressingTables/WhatsApp%20Image%202025-07-05%20at%2002.57.45_ddcc5e58.jpg?raw=true",
+        "caption":  `
+        Hollywood Mirror Large
+        46,900/=`
+      },
+      {
+        "url": "https://github.com/mal-sizu/wa_funri_bot/blob/master/assets/tables%2FdressingTables/WhatsApp%20Image%202025-07-05%20at%2002.57.33_47a5ed6a.jpg?raw=true",
+        "caption": `
+        Melamine long drawers Wardrobe - 32,500/=
+        Bedside Cupboard - 9,900/=
+        Melamine Saree Dressing Table = 26,500/=
+
+        *Package Price = 65,900/=*
+        `
+      },
+      {
+        "url": "https://github.com/mal-sizu/wa_funri_bot/blob/master/assets/tables%2FdressingTables/WhatsApp%20Image%202025-07-05%20at%2002.57.36_f746c8a4.jpg?raw=true",
         "caption": ""
       },
     ],
@@ -433,14 +470,6 @@ interface Image {
         "caption": ""
       },
       {
-        "url": "https://github.com/mal-sizu/wa_funri_bot/blob/master/assets/catalogue/56.png?raw=true",
-        "caption": ""
-      },
-      {
-        "url": "https://github.com/mal-sizu/wa_funri_bot/blob/master/assets/catalogue/57.png?raw=true",
-        "caption": ""
-      },
-      {
         "url": "https://github.com/mal-sizu/wa_funri_bot/blob/master/assets/catalogue/58.png?raw=true",
         "caption": ""
       },
@@ -454,7 +483,9 @@ interface Image {
       },
       {
         "url": "https://github.com/mal-sizu/wa_funri_bot/blob/master/assets/tables%2FwritingTables/WhatsApp%20Image%202025-07-05%20at%2002.57.34_50957178.jpg?raw=true",
-        "caption": "Samples"
+        "caption": `
+        Melamine Cupboard Writing Table
+        21,500/=`
       },
       {
         "url": "https://github.com/mal-sizu/wa_funri_bot/blob/master/assets/tables%2FwritingTables/WhatsApp%20Image%202025-07-05%20at%2002.57.34_bde85fed.jpg?raw=true",
