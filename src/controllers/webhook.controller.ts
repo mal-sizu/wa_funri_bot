@@ -1,7 +1,7 @@
 // src/controllers/webhook.controller.ts
 
 import { Request, Response } from 'express';
-import { sendImageBundle, sendTemplateMessage } from '../services/whatsapp.service';
+import { sendImageBundle, sendInteractiveList, sendTemplateMessage } from '../services/whatsapp.service';
 
 // The dotenv.config() in your main server file (index.ts) is sufficient.
 // We can remove the redundant call here.
@@ -58,33 +58,56 @@ export async function handleWebhook(req: Request, res: Response) {
         const selectedOptionId = message.interactive.list_reply.id;
         console.log(`User selected: ${selectedOptionId}`);
 
-        // switch (selectedOptionId) {
-        //   case 'view-products':
-        //     await sendInteractiveList(customerPhoneNumber, 'productCategories');
-        //     break;
-        //   case 'category-electronics':
-        //     await sendImageBundle(customerPhoneNumber, 'electronics');
-        //     break;
-        //   case 'category-clothing':
-        //     await sendImageBundle(customerPhoneNumber, 'clothing');
-        //     break;
-        //   case 'talk-to-agent':
-        //     console.log('TODO: Implement talk to agent flow');
-        //     break;
-        //   case 'back-to-main':
-        //     await sendInteractiveList(customerPhoneNumber, 'mainMenu');
-        //     break;
-        //   default:
-        //     console.log(`No action for selection: ${selectedOptionId}`);
-        //     break;
-        // }
+        switch (selectedOptionId) {
+          case 'dressing-tables':
+            await sendImageBundle(customerPhoneNumber, 'dressing-tables-cat');
+            break;
+        
+          case 'beds':
+            await sendImageBundle(customerPhoneNumber, 'beds-cat');
+            break;
+        
+          case 'room-packages':
+            await sendImageBundle(customerPhoneNumber, 'room-packages-cat');
+            break;
+        
+          case 'tables':
+            await sendImageBundle(customerPhoneNumber, 'tables');
+            break;
+        
+          case 'racks':
+            await sendImageBundle(customerPhoneNumber, 'racks');
+            break;
+        
+          case 'sofa':
+            await sendImageBundle(customerPhoneNumber, 'sofa');
+            break;
+        
+          case 'iron-cupboards':
+            await sendImageBundle(customerPhoneNumber, 'iron-cupboards');
+            break;
+        
+          case 'other-furniture':
+            await sendImageBundle(customerPhoneNumber, 'other-furniture-cat');
+            break;
+          
+          case 'back-to-main':
+            // This would take the user back to the main menu
+            await sendInteractiveList(customerPhoneNumber, 'mainMenu');
+            break;
+        
+          default:
+            console.log(`No action defined for selection: ${selectedOptionId}`);
+            break;
+        }
 
       } else if (message.type === 'text') {
         console.log(`Received text from ${customerPhoneNumber}. Triggering welcome flow.`);
         
         await sendTemplateMessage(customerPhoneNumber, 'mark_01');
-        await sendImageBundle(customerPhoneNumber, 'clothing');
-        
+        await sendImageBundle(customerPhoneNumber, 'catalogue');
+        await sendImageBundle(customerPhoneNumber, 'cupboards');
+        await sendInteractiveList(customerPhoneNumber, 'mainMenu')
       } else {
         console.log(`Ignoring unhandled message type '${message.type}'`);
       }

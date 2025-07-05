@@ -31,13 +31,48 @@ interface InteractiveListPayload {
       action: {
         button: 'Search 🔍',
         sections: [{
-            rows: [
-              { id: 'wardrobes', title: '🚪 Wardrobes', description: 'මෙලමයින්, වානේ, භාග අල්මාරි | Melamine, Steel, Half wardrobes' },
-              { id: 'beds', title: '🛏 Beds', description: 'තේක්ක, ඇක්ටෝනියා, දිවානි ඇඳන් | Teak, Actoniya, Divan Beds' },
-              { id: 'tables', title: '🪑 Tables', description: 'තේක්ක, මෙලමයින් මේස | Teak, Melamine, tables' },
-              { id: 'racks', title: '📚 Racks & Shelves', description: 'මෙලමයින් රාක්ක මාදිලි | Melamine racks and shelves' },
-            { id: 'mattress', title: 'Mattresses', description: 'Spring | Double Form | Cool Form | Hybrid mattresses' },
-           ],
+          rows: [
+            {
+              id: 'dressing-tables',
+              title: '🪞 Dressing Tables',
+              description: 'තේක්ක සහ මෙලමයින් | Teak & Melamine models for your selection.'
+            },
+            {
+              id: 'beds',
+              title: '🛏 Beds & Mattresses',
+              description: 'තේක්ක, ඇක්ටෝනියා ඇඳන් | Spring, Form & Hybrid mattresses'
+            },
+            {
+              id: 'room-packages',
+              title: '📦 Bed Room Sets',
+              description: 'ඇඳ, කබඩ්, මේස සමඟ | Complete sets with bed, cupboard & table.'
+            },
+            {
+              id: 'tables',
+              title: '🪑 Tables',
+              description: 'තේක්ක, මෙලමයින් මේස | Teak, Melamine, and other wooden tables.'
+            },
+            {
+              id: 'racks',
+              title: '📚 Racks & Shelves',
+              description: 'මෙලමයින් රාක්ක මාදිලි | Stylish Melamine racks and shelves.'
+            },
+            {
+              id: 'sofa',
+              title: '🛋 Sofa Sets | සෝෆා',
+              description: 'Modern & classic designs. Fabric & leather options. විවිධ මාදිලි.'
+            },
+            {
+              id: 'iron-cupboards',
+              title: '🥌 Iron Cupboards | කබඩ්',
+              description: 'ශක්තිමත් සහ ආරක්ෂිතයි | Durable & secure storage. Multiple sizes.'
+            },
+            {
+              id: 'other-furniture',
+              title: '🪄 වෙනත් | Other',
+              description: 'පුටු, ස්ටෑන්ඩ් සහ තවත් | Stools, stands, and more furniture.'
+            }
+          ],
           }],
       },
     },

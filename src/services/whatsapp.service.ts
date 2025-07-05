@@ -140,7 +140,7 @@ export async function sendImageBundle(to: string, bundleId: string): Promise<voi
   for (const image of bundle) {
     await sendImage(to, image.url, image.caption);
     // Optional: Add a small delay to ensure images arrive in order
-    await new Promise(resolve => setTimeout(resolve, 500));
+    await new Promise(resolve => setTimeout(resolve, 50)); // Delay 50ms feel free to chnage when domain bought !
   }
 }
 
