@@ -598,35 +598,75 @@ export const assetsData = {
       "caption": ""
     },
     {
-      "url": "https://github.com/mal-sizu/wa_funri_bot/blob/master/assets/tables%2FwritingTables/WhatsApp%20Image%202025-07-05%20at%2002.57.34_50957178.jpg?raw=true",
+      "url": "https://github.com/mal-sizu/wa_funri_bot/blob/master/assets/tables%2FwritingTables/01wtbs001.jpg?raw=true",
       "caption": ""
     },
     {
-      "url": "https://github.com/mal-sizu/wa_funri_bot/blob/master/assets/tables%2FwritingTables/WhatsApp%20Image%202025-07-05%20at%2002.57.34_bde85fed.jpg?raw=true",
+      "url": "https://github.com/mal-sizu/wa_funri_bot/blob/master/assets/tables%2FwritingTables/02wtbs002.jpg?raw=true",
       "caption": ""
     },
     {
-      "url": "https://github.com/mal-sizu/wa_funri_bot/blob/master/assets/tables%2FwritingTables/WhatsApp%20Image%202025-07-05%20at%2002.57.34_e8ddf675.jpg?raw=true",
+      "url": "https://github.com/mal-sizu/wa_funri_bot/blob/master/assets/tables%2FwritingTables/03wtb003.jpg?raw=true",
       "caption": ""
     },
     {
-      "url": "https://github.com/mal-sizu/wa_funri_bot/blob/master/assets/tables%2FwritingTables/WhatsApp%20Image%202025-07-05%20at%2002.57.35_466485a2.jpg?raw=true",
+      "url": "https://github.com/mal-sizu/wa_funri_bot/blob/master/assets/tables%2FwritingTables/04wtbl001.jpg?raw=true",
       "caption": ""
     },
     {
-      "url": "https://github.com/mal-sizu/wa_funri_bot/blob/master/assets/tables%2FwritingTables/WhatsApp%20Image%202025-07-05%20at%2002.57.35_fecf740c.jpg?raw=true",
+      "url": "https://github.com/mal-sizu/wa_funri_bot/blob/master/assets/tables%2FwritingTables/05wtbl002.jpg?raw=true",
       "caption": ""
     },
     {
-      "url": "https://github.com/mal-sizu/wa_funri_bot/blob/master/assets/tables%2FwritingTables/WhatsApp%20Image%202025-07-05%20at%2002.57.40_a0a7742b.jpg?raw=true",
+      "url": "https://github.com/mal-sizu/wa_funri_bot/blob/master/assets/tables%2FwritingTables/06wtbl004.jpg?raw=true",
       "caption": ""
     },
     {
-      "url": "https://github.com/mal-sizu/wa_funri_bot/blob/master/assets/tables%2FwritingTables/WhatsApp%20Image%202025-07-05%20at%2002.57.40_d24ea3e1.jpg?raw=true",
+      "url": "https://github.com/mal-sizu/wa_funri_bot/blob/master/assets/tables%2FwritingTables/07wtbl005.jpg?raw=true",
       "caption": ""
     },
     {
-      "url": "https://github.com/mal-sizu/wa_funri_bot/blob/master/assets/tables%2FwritingTables/WhatsApp%20Image%202025-07-05%20at%2002.57.40_dccf73c8.jpg?raw=true",
+      "url": "https://github.com/mal-sizu/wa_funri_bot/blob/master/assets/tables%2FwritingTables/08wt.jpg?raw=true",
+      "caption": ""
+    },
+    {
+      "url": "https://github.com/mal-sizu/wa_funri_bot/blob/master/assets/tables%2FwritingTables/ctb001.jpg?raw=true",
+      "caption": ""
+    },
+    {
+      "url": "https://github.com/mal-sizu/wa_funri_bot/blob/master/assets/tables%2FwritingTables/ctb002.jpg?raw=true",
+      "caption": ""
+    },
+    {
+      "url": "https://github.com/mal-sizu/wa_funri_bot/blob/master/assets/tables%2FwritingTables/ctb003.jpg?raw=true",
+      "caption": ""
+    },
+    {
+      "url": "https://github.com/mal-sizu/wa_funri_bot/blob/master/assets/tables%2FwritingTables/ctb004.jpg?raw=true",
+      "caption": ""
+    },
+    {
+      "url": "https://github.com/mal-sizu/wa_funri_bot/blob/master/assets/tables%2FwritingTables/ctb005.jpg?raw=true",
+      "caption": ""
+    },
+    {
+      "url": "https://github.com/mal-sizu/wa_funri_bot/blob/master/assets/tables%2FwritingTables/ctb006.jpg?raw=true",
+      "caption": ""
+    },
+    {
+      "url": "https://github.com/mal-sizu/wa_funri_bot/blob/master/assets/tables%2FwritingTables/ctb007.jpg?raw=true",
+      "caption": ""
+    },
+    {
+      "url": "https://github.com/mal-sizu/wa_funri_bot/blob/master/assets/tables%2FwritingTables/ctb010.jpg?raw=true",
+      "caption": ""
+    },
+    {
+      "url": "https://github.com/mal-sizu/wa_funri_bot/blob/master/assets/tables%2FwritingTables/wtr001.jpg?raw=true",
+      "caption": ""
+    },
+    {
+      "url": "https://github.com/mal-sizu/wa_funri_bot/blob/master/assets/tables%2FwritingTables/wtr002.jpg?raw=true",
       "caption": ""
     }
   ]
